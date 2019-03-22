@@ -1,7 +1,7 @@
 # OpenAPI Generator
 
 ## Prerequisities 
-To build from source, you need the following installed and available in your $PATH:
+To build from source, you need the following software installed and available in your $PATH:
 
 * [Java 7 or 8](http://java.oracle.com)
 
