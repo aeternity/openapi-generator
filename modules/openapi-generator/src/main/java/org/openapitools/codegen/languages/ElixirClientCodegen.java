@@ -119,18 +119,18 @@ public class ElixirClientCodegen extends DefaultCodegen implements CodegenConfig
         //         "",                                                       // the destination folder, relative `outputFolder`
         //         "README.md")                                          // the output file
         // );
-        supportingFiles.add(new SupportingFile("config.exs.mustache",
-                "config",
-                "config.exs")
-        );
-        supportingFiles.add(new SupportingFile("mix.exs.mustache",
-                "",
-                "mix.exs")
-        );
-        supportingFiles.add(new SupportingFile("test_helper.exs.mustache",
-                "test",
-                "test_helper.exs")
-        );
+        // supportingFiles.add(new SupportingFile("config.exs.mustache",
+        //         "config",
+        //         "config.exs")
+        // );
+        // supportingFiles.add(new SupportingFile("mix.exs.mustache",
+        //         "",
+        //         "mix.exs")
+        // );
+        // supportingFiles.add(new SupportingFile("test_helper.exs.mustache",
+        //         "test",
+        //         "test_helper.exs")
+        // );
         // supportingFiles.add(new SupportingFile("gitignore.mustache",
         //         "",
         //         ".gitignore")
@@ -360,7 +360,7 @@ public class ElixirClientCodegen extends DefaultCodegen implements CodegenConfig
         for (String word : moduleName.split("\\.")) {
             underscoredWords.add(underscore(word));
         }
-        return ("lib/");
+        return ("");
         // return ("lib/" + join("/", underscoredWords)).replace('/', File.separatorChar);
     }
 
