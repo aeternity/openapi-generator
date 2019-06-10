@@ -22,4 +22,3 @@ To build from source, you need the following software installed and available in
 **Notes:**
   - `PATH_TO_SWAGGER.yaml` - is a path to the `swagger.yaml` file, usually this file is located in `config` folder, and can be found [here](https://github.com/aeternity/aeternity/blob/master/config/swagger.yaml).
   - `DESTINATION_FOLDER` - is a path to the folder, where the aeternity node elixir API client will be generated. 
-3. Run `mix deps.get && mix format && iex -S mix ` 
