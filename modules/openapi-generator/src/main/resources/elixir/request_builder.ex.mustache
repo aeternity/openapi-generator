@@ -111,12 +111,12 @@ defmodule {{moduleName}}.RequestBuilder do
 
   ## Returns
 
-  {:ok, struct} on success
+  {:ok, struct | any} on success
   {:error, term} on failure
   """
   @spec decode(Tesla.Env.t() | term(), false | struct() | [struct()]) ::
-          {:ok, struct()} | {:ok, Tesla.Env.t()} | {:error, any}
-  def decode(%Tesla.Env{} = env, false), do: {:ok, env}
+          {:ok, struct()} | {:ok, any()} | {:error, any}
+  def decode(%Tesla.Env{body: body}, false), do: Poison.decode(body, keys: :atoms)
   def decode(%Tesla.Env{body: body}, struct), do: Poison.decode(body, as: struct)
 
   def evaluate_response({:ok, %Tesla.Env{} = env}, mapping) do
